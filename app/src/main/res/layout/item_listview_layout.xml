@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/default_background_2"
+        android:paddingTop="5dp"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+        <ImageView
+                android:id="@+id/main_login_imageview"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/login"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"/>
+        <ImageView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:id="@+id/main_logo_imageview"
+                android:src="@drawable/logo"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+        <ImageView
+                android:id="@+id/add_news_item_imageview"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/add_news_item"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/item_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <HorizontalScrollView
+                android:id="@+id/news_list_HSV"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:scrollbars="none">
+
+            <LinearLayout
+            android:id="@+id/news_list_llout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"/>
+
+        </HorizontalScrollView>
+
+        <com.xhit_nava.news.tools.ViewPagerIndicator
+                android:id="@+id/news_list_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:orientation="horizontal">
+
+        </com.xhit_nava.news.tools.ViewPagerIndicator>
+
+        <android.support.v4.view.ViewPager
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/news_list_viewpaper"
+                android:layout_below="@id/item_bar"/>
+    </LinearLayout>
+
+</LinearLayout>

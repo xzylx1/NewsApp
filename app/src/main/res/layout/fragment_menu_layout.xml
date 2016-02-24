@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="250dp"
+             android:layout_height="match_parent"
+             android:id="@+id/fragment_menu"
+             android:background="@drawable/default_background_1">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:id="@+id/head_icon_login"
+                android:layout_width="99dp"
+                android:layout_height="99dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/head_default"/>
+
+        <TextView
+                android:id="@+id/click_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tx_login"
+                android:textSize="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/head_icon_login"
+                android:paddingTop="5dp"/>
+
+        <LinearLayout
+                android:id="@+id/first_item"
+                android:onClick="first_menu_item"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/click_login"
+                android:layout_marginTop="60dp">
+
+            <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/share_icon_qqzone"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tx_first_item"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:textSize="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/second_item"
+                android:onClick="second_menu_item"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/first_item"
+                android:layout_marginTop="3dp">
+
+            <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/share_icon_sina"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tx_second_item"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:textSize="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/third_item"
+                android:onClick="third_menu_item"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/second_item"
+                android:layout_marginTop="3dp">
+
+            <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/share_icon_weixin"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tx_third_item"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/menu_setting"
+                android:onClick="menu_setting"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/third_item"
+                android:layout_marginTop="60dp">
+
+            <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/setting_ico"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tx_setting"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>
